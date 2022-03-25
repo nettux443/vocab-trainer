@@ -1,0 +1,93 @@
+MacBook-Pro-4:~ lbourne$ cat chinese-practice.html 
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+    font-family: sans-serif;
+}
+#q {
+    text-align: center;
+    width: 95%
+    padding: 5vh 0 5vh 0;
+    font-size: 4em;
+}
+.correct {
+    background-color: #3f3;
+}
+.incorrect {
+    background-color: #f33;
+}
+.ans {
+    font-size: 4em;
+    display: inline-block;
+    float: left;
+    width: 45vw;
+    height: 45vh;
+    text-align: center;
+    vertical-align: middle;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+</script>
+<script src="./terms.js">
+</script>
+<script>
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+function getQuestion() {
+    var q = terms[Math.floor(Math.random() * terms.length)];
+    var bad1 = terms[Math.floor(Math.random() * terms.length)];
+    var bad2 = terms[Math.floor(Math.random() * terms.length)];
+    var bad3 = terms[Math.floor(Math.random() * terms.length)];
+    return [q,bad1,bad2,bad3];
+}
+
+function resetQuestion() {
+    var question = getQuestion();
+    $("#q").text(question[0].english);
+    $("#q").attr("pinyin", question[0].pinyin);
+    $("#q").attr("chinese", question[0].chinese);
+    var answers = shuffle([question[0], question[1], question[2], question[3]]);
+    var boxes = ["a0", "a1", "a2", "a3"];
+    var i = 0;
+    boxes.forEach(function(e) {
+        var box = $("#"+e);
+        box.removeClass("correct");
+        box.removeClass("incorrect");
+        box.html(answers[i].pinyin + "<br/>" + answers[i].chinese);
+        box.attr("english", answers[i].english);
+        box.attr("chinese", answers[i].chinese);
+        i = i + 1;
+    });
+}
+
+$( document ).ready(function() {
+    resetQuestion();
+
+    $(".ans").on('click', function() {
+        var correct = $("#q");
+        if ($(this).attr("chinese") == correct.attr("chinese")) {
+            $(this).addClass("correct");
+        } else {
+            $(this).addClass("incorrect");
+        }
+        setTimeout(resetQuestion, 500);
+    });
+
+});
+
+
+</script>
+</head>
+<body>
+<div id='q'></div>
+<div class='ans' id='a0'></div>
+<div class='ans' id='a1'></div>
+<div class='ans' id='a2'></div>
+<div class='ans' id='a3'></div>
+</body>
+
+</html>
