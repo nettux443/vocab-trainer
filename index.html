@@ -3,29 +3,71 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <style>
+#top {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
 body {
     font-family: sans-serif;
+    background-color: #bbb;
+}
+.clearfix {
+    float: none;
+    clear: both;
+    width:100%
 }
 #q {
     text-align: center;
-    width: 95%
-    padding: 5vh 0 5vh 0;
-    font-size: 4em;
+    clear: left;
+    padding: 5vh;
+    font-size: 4vw;
+    width: auto;
+    display: inline-block;
 }
 .correct {
-    background-color: #3f3;
+    background-color: #3f3!important;
 }
 .incorrect {
-    background-color: #f33;
+    background-color: #f33!important;
 }
 .ans {
-    font-size: 4em;
+    font-size: 4vw;
     display: inline-block;
     float: left;
     width: 45vw;
-    height: 45vh;
+    margin: 2vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     text-align: center;
-    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 20px;
+}
+#q {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 5px #9af;
+}
+.ans:hover {
+    box-shadow: 0px 0px 5px 5px #9af;
+}
+#toggle-opts {
+    float: left;
+    text-align: center;
+    width: 14vw;
+    height: 4vw;
+    font-size: 2vw;
+    border-radius: 20px;
+    border: 0px;
+}
+#toggle-opts:hover {
+    background-color: #9af;
+    color: #fff;
+}
+#opts {
+    text-align: left;
+    border-radius: 3px;
+    float: left;
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js">
@@ -77,7 +119,7 @@ $( document ).ready(function() {
     var options_html = "<ul>";
     const iterator = term_list.keys();
     for (const key of Object.keys(term_list))  {
-        options_html = options_html + "<li><input type='checkbox' value='" + key + "'checked/>" + key + "</li>";
+        options_html = options_html + "<li><input type='checkbox' value='" + key + "' id='opt-"+ key +"' checked/><label for='opt-"+key+"'>" + key + "</label></li>";
     }
     options_html = options_html + "</ul>";
     $("#opts").html(options_html);
@@ -105,9 +147,12 @@ $( document ).ready(function() {
 </script>
 </head>
 <body>
+<div id='top'>
 <button id='toggle-opts'>Options</button>
 <div id='opts'></div>
+<span class='clearfix'><br/><br/><br/><br/></span>
 <div id='q'></div>
+</div>
 <div class='ans' id='a0'></div>
 <div class='ans' id='a1'></div>
 <div class='ans' id='a2'></div>
