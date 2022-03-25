@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <style>
 body {
     font-family: sans-serif;
@@ -32,11 +33,20 @@ body {
 <script src="./terms.js">
 </script>
 <script>
+
+
 function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
 function getQuestion() {
+    var terms = Array();
+    var options = $("#opts input[type=checkbox]:checkbox:checked");
+    for (opt of options) {
+        console.log(opt.value);
+        terms = terms.concat(term_list[opt.value]);
+    }
+    //var terms = term_list.basic.concat(term_list.work.concat(term_list.family.concat(term_list.active.concat(term_list.colours.concat(term_list.food.concat(term_list.body.concat(term_list.weather.concat(term_list.clothes.concat(term_list.time.concat(term_list.directions))))))))));
     var q = terms[Math.floor(Math.random() * terms.length)];
     var bad1 = terms[Math.floor(Math.random() * terms.length)];
     var bad2 = terms[Math.floor(Math.random() * terms.length)];
@@ -64,6 +74,15 @@ function resetQuestion() {
 }
 
 $( document ).ready(function() {
+    var options_html = "<ul>";
+    const iterator = term_list.keys();
+    for (const key of Object.keys(term_list))  {
+        options_html = options_html + "<li><input type='checkbox' value='" + key + "'checked/>" + key + "</li>";
+    }
+    options_html = options_html + "</ul>";
+    $("#opts").html(options_html);
+    $("#opts").hide();
+
     resetQuestion();
 
     $(".ans").on('click', function() {
@@ -76,12 +95,18 @@ $( document ).ready(function() {
         setTimeout(resetQuestion, 500);
     });
 
+    $("#toggle-opts").click(function() {
+        $("#opts").toggle();
+    });
+
 });
 
 
 </script>
 </head>
 <body>
+<button id='toggle-opts'>Options</button>
+<div id='opts'></div>
 <div id='q'></div>
 <div class='ans' id='a0'></div>
 <div class='ans' id='a1'></div>

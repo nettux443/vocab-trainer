@@ -1,5 +1,6 @@
-var terms = Array();
-var terms['basic'] = Array(
+// basic, work, family, active, colours, food, body, weather, clothes, time, directions
+var term_list = Array();
+term_list['basic'] = Array(
 {"chinese": "哪儿",
  "pinyin": "nǎ'er",
  "english": "where"},
@@ -98,11 +99,11 @@ var terms['basic'] = Array(
  "english": "she"},
 {"chinese": "他",
  "pinyin": "tā",
- "english": "he"})
+ "english": "he"});
 
 //----------------------------------
 
-var terms['weather'] = Array(
+term_list['weather'] = Array(
 {"english": "cold",
  "chinese": "冷",
  "pinyin": "lěng"},
@@ -117,11 +118,11 @@ var terms['weather'] = Array(
 {"english": "raining",
  "chinese": "下雨",
  "pinyin": "xià yǔ"
-},
+});
 
 //----------------------------------
 
-var terms['food'] = Array(
+term_list['food'] = Array(
 {"english": "plate",
  "chinese": "盘子",
  "pinyin": "pánzi"
@@ -286,7 +287,7 @@ var terms['food'] = Array(
 
 //----------------------------------
 
-var terms['clothes'] = Array(
+term_list['clothes'] = Array(
 {"english": "sock",
  "chinese": "袜子",
  "pinyin": "wàzi"
@@ -351,7 +352,7 @@ var terms['clothes'] = Array(
 
 //----------------------------------
 
-var terms['family'] = Array(
+term_list['family'] = Array(
 {"english": "mum",
  "chinese": "妈妈",
  "pinyin": "māmā"
@@ -428,7 +429,7 @@ var terms['family'] = Array(
 
 //----------------------------------
 
-var terms['work'] = Array(
+term_list['work'] = Array(
 {"english": "office",
  "chinese": "公司",
  "pinyin": "gōngsī"
@@ -513,7 +514,7 @@ var terms['work'] = Array(
 
 //----------------------------------
 
-var terms['time'] = Array(
+term_list['time'] = Array(
 {"english": "sometimes",
  "chinese": "有时候",
  "pinyin": "yǒushíhòu"
@@ -534,7 +535,7 @@ var terms['time'] = Array(
 
 //----------------------------------
 
-var terms['active'] = Array(
+term_list['active'] = Array(
 {"english": "sports",
  "chinese": "运动",
  "pinyin": "yùndòng"
@@ -645,7 +646,7 @@ var terms['active'] = Array(
 }
 );
 
-var terms['colours'] = Array(
+term_list['colours'] = Array(
 {"english": "red",
  "chinese": "红色",
  "pinyin": "hóngsè"
@@ -684,7 +685,7 @@ var terms['colours'] = Array(
 }
 );
 
-var terms['other'] = Array(
+term_list['other'] = Array(
 {"english": "to try",
  "chinese": "试",
  "pinyin": "shì"
@@ -831,7 +832,7 @@ var terms['other'] = Array(
 }
 );
 
-var terms['directions'] = Array(
+term_list['directions'] = Array(
 {"english": "to know",
  "chinese": "知道",
  "pinyin": "zhīdào"
@@ -880,7 +881,19 @@ var terms['directions'] = Array(
 
 // -------------------------------------
 
-var terms['body'] = Array(
+term_list['body'] = Array(
+{"english": "knee",
+ "chinese": "膝盖",
+ "pinyin": "xīgài"
+},
+{"english": "wrist",
+ "chinese": "手腕",
+ "pinyin": "shǒuwàn"
+},
+{"english": "ear",
+ "chinese": "耳朵",
+ "pinyin": "ěr duo"
+},
 {"english": "head",
  "chinese": "头",
  "pinyin": "tóu"
@@ -984,5 +997,64 @@ var terms['body'] = Array(
 {"english": "medicine",
  "chinese": "药",
  "pinyin": "yào"
+},
+{"english": "joint",
+ "chinese": "耳朵",
+ "pinyin": "ěrduǒ"
 }
 );
+
+
+term_list['skills'] = Array(
+{"english": "computer",
+ "chinese": "电脑",
+ "pinyin": "diànnǎo"
+},
+{"english": "broken",
+ "chinese": "坏",
+ "pinyin": "huài"
+},
+{"english": "to repair",
+ "chinese": "修",
+ "pinyin": "xiū"
+},
+{"english": "can (able to)",
+ "chinese": "会",
+ "pinyin": "huì"
+},
+{"english": "maybe",
+ "chinese": "可能",
+ "pinyin": "kěnéng"
+},
+{"english": "to surf online",
+ "chinese": "上网",
+ "pinyin": "shàngwǎng"
+},
+{"english": "swimming",
+ "chinese": "游泳",
+ "pinyin": "yóuyǒng"
+},
+{"english": "ice skating",
+ "chinese": "滑冰",
+ "pinyin": "huábīng"
+},
+{"english": "drawing",
+ "chinese": "画画",
+ "pinyin": "huà huà"
+},
+{"english": "driving",
+ "chinese": "开车",
+ "pinyin": "kāichē"
+},
+{"english": "cooking",
+ "chinese": "做饭",
+ "pinyin": "zuò fàn"
+},
+{"english": "offline",
+ "chinese": "下线",
+ "pinyin": "xià xiàn"
+}
+);
+
+
+ 
