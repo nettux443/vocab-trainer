@@ -1,10 +1,8 @@
-var terms = Array(
+var terms = Array();
+var terms['basic'] = Array(
 {"chinese": "哪儿",
  "pinyin": "nǎ'er",
  "english": "where"},
-{"chinese": "吗",
- "pinyin": "ma",
- "english": "Question particle"},
 {"chinese": "我",
  "pinyin": "wǒ",
  "english": "I"},
@@ -100,68 +98,14 @@ var terms = Array(
  "english": "she"},
 {"chinese": "他",
  "pinyin": "tā",
- "english": "he"},
+ "english": "he"})
 
+//----------------------------------
 
+var terms['weather'] = Array(
 {"english": "cold",
  "chinese": "冷",
  "pinyin": "lěng"},
-{"english": "bean sprouts",
- "chinese": "豆芽",
- "pinyin": "dòuyá"
-},
-{"english": "online",
- "chinese": "网上",
- "pinyin": "wǎngshàng"
-},
-{"english": "colleague",
- "chinese": "同事",
- "pinyin": "tóngshì"
-},
-{"english": "classmates",
- "chinese": "同学",
- "pinyin": "tóngxué"
-},
-{"english": "sometimes",
- "chinese": "有时候",
- "pinyin": "yǒushíhòu"
-},
-{"english": "when",
- "chinese": "什么时候",
- "pinyin": "shénme shíhòu"
-},
-{"english": "cheese",
- "chinese": "起司",
- "pinyin": "qǐ sī"
-},
-{"english": "simple",
- "chinese": "简单",
- "pinyin": "jiǎndān"
-},
-{"english": "sock",
- "chinese": "袜子",
- "pinyin": "wàzi"
-},
-{"english": "orange juice",
- "chinese": "橙汁",
- "pinyin": "chéngzhī"
-},
-{"english": "vegetable",
- "chinese": "蔬菜",
- "pinyin": "shūcài"
-},
-{"english": "garlic",
- "chinese": "大蒜",
- "pinyin": "dàsuàn"
-},
-{"english": "mango",
- "chinese": "芒果",
- "pinyin": "mángguǒ"
-},
-{"english": "step-father",
- "chinese": "继父",
- "pinyin": "jìfù"
-},
 {"english": "cloudy day",
  "chinese": "阴天",
  "pinyin": "yīn tiān"
@@ -174,221 +118,65 @@ var terms = Array(
  "chinese": "下雨",
  "pinyin": "xià yǔ"
 },
-{"english": "snowing",
- "chinese": "下雪",
- "pinyin": "xià xuě"
+
+//----------------------------------
+
+var terms['food'] = Array(
+{"english": "plate",
+ "chinese": "盘子",
+ "pinyin": "pánzi"
 },
-{"english": "boss",
- "chinese": "老板",
- "pinyin": "lǎobǎn"
+{"english": "fork",
+ "chinese": "叉子",
+ "pinyin": "chāzi"
 },
-{"english": "government",
- "chinese": "政府",
- "pinyin": "zhèngfǔ"
+{"english": "knife",
+ "chinese": "刀子",
+ "pinyin": "dāozi"
 },
-{"english": "pounds (£)",
- "chinese": "英镑",
- "pinyin": "yīngbàng"
+{"english": "spoon",
+ "chinese": "勺子",
+ "pinyin": "sháozi"
 },
-{"english": "often",
- "chinese": "经常",
- "pinyin": "jīngcháng"
+{"english": "chopsticks",
+ "chinese": "筷子",
+ "pinyin": "kuàizi"
 },
-{"english": "first time",
- "chinese": "第一次",
- "pinyin": "dì yī cì"
+{"english": "pepper",
+ "chinese": "辣椒",
+ "pinyin": "làjiāo"
 },
-{"english": "sports",
- "chinese": "运动",
- "pinyin": "yùndòng"
+{"english": "ginger",
+ "chinese": "姜",
+ "pinyin": "jiāng"
 },
-{"english": "yoga",
- "chinese": "瑜伽",
- "pinyin": "yújiā"
+{"english": "corriander",
+ "chinese": "香菜",
+ "pinyin": "xiāngcài"
 },
-{"english": "martial arts",
- "chinese": "武术",
- "pinyin": "wǔshù"
+{"english": "dumpling",
+ "chinese": "饺子",
+ "pinyin": "jiǎozi"
 },
-{"english": "music",
- "chinese": "音乐",
- "pinyin": "yīnyuè"
+{"english": "tea",
+ "chinese": "茶",
+ "pinyin": "chá"
 },
-{"english": "jazz",
- "chinese": "士乐",
- "pinyin": "juéshì"
+{"english": "fish",
+ "chinese": "鱼",
+ "pinyin": "yú"
 },
-{"english": "laptop",
- "chinese": "笔记本电脑",
- "pinyin": "bǐjìběn diànnǎo"
+{"english": "noodles",
+ "chinese": "面条",
+ "pinyin": "miàntiáo"
 },
-{"english": "ipad (tablet)",
- "chinese": "平板电脑",
- "pinyin": "píngbǎn diànnǎo"
+{"english": "cooked rice",
+ "chinese": "米饭",
+ "pinyin": "mǐfàn"
 },
-{"english": "comfortable",
- "chinese": "舒服",
- "pinyin": "shūfú"
-},
-{"english": "sofa",
- "chinese": "沙发",
- "pinyin": "shāfā"
-},
-{"english": "beach", 
- "chinese": "沙滩",
- "pinyin": "shātān"
-},
-{"english": "nervous",
- "chinese": "紧张",
- "pinyin": "jǐnzhāng"
-},
-{"english": "trumpet",
- "chinese": "小号",
- "pinyin": "xiǎohào"
-},
-{"english": "because",
- "chinese": "因为",
- "pinyin": "yīnwèi"
-},
-{"english": "always",
- "chinese": "总是",
- "pinyin": "zǒng shì"
-},
-{"english": "sometimes",
- "chinese": "有时",
- "pinyin": "yǒushí"
-},
-{"english": "perhaps",
- "chinese": "可能",
- "pinyin": "kěnéng"
-},
-{"english": "money",
- "chinese": "钱",
- "pinyin": "qián"
-},
-{"english": "how many",
- "chinese": "多少",
- "pinyin": "duōshǎo"
-},
-{"english": "apple",
- "chinese": "苹果",
- "pinyin": "píngguǒ"
-},
-{"english": "what",
- "chinese": "什么",
- "pinyin": "shénme"
-},
-{"english": "to buy",
- "chinese": "买",
- "pinyin": "mǎi"
-},
-{"english": "half kilo",
- "chinese": "斤",
- "pinyin": "jīn"
-},
-{"english": "two of",
- "chinese": "两个",
- "pinyin": "liǎng gè"
-},
-{"english": "strawberry",
- "chinese": "草莓",
- "pinyin": "cǎoméi"
-},
-{"english": "too (too much)",
- "chinese": "太",
- "pinyin": "tài  "
-},
-{"english": "expensive",
- "chinese": "贵",
- "pinyin": "guì"
-},
-{"english": "cheap",
- "chinese": "便宜",
- "pinyin": "piányí"
-},
-{"english": "a little",
- "chinese": "一点儿",
- "pinyin": "yīdiǎnr"
-},
-{"english": "ok",
- "chinese": "行",
- "pinyin": "xíng"
-},
-{"english": "to want",
- "chinese": "要",
- "pinyin": "yào"
-},
-{"english": "altogether",
- "chinese": "一共",
- "pinyin": "yīgòng"
-},
-{"english": "that",
- "chinese": "那",
- "pinyin": "nà"
-},
-{"english": "sweater",
- "chinese": "毛衣",
- "pinyin": "máoyī"
-},
-{"english": "how",
- "chinese": "怎么",
- "pinyin": "zěnme"
-},
-{"english": "sell",
- "chinese": "卖",
- "pinyin": "mài"
-},
-{"english": "to have",
- "chinese": "有",
- "pinyin": "yǒu"
-},
-{"english": "red",
- "chinese": "红色",
- "pinyin": "hóngsè"
-},
-{"english": "green",
- "chinese": "绿色",
- "pinyin": "lǜsè"
-},
-{"english": "yellow",
- "chinese": "黄色",
- "pinyin": "huángsè"
-},
-{"english": "orange",
- "chinese": "橙色",
- "pinyin": "chéngsè"
-},
-{"english": "blue",
- "chinese": "蓝色",
- "pinyin": "lánsè"
-},
-{"english": "black",
- "chinese": "黑色",
- "pinyin": "hēisè"
-},
-{"english": "white",
- "chinese": "白色",
- "pinyin": "báisè"
-},
-{"english": "grey",
- "chinese": "灰色",
- "pinyin": "huīsè"
-},
-{"english": "to try",
- "chinese": "试",
- "pinyin": "shì"
-},
-{"english": "this",
- "chinese": "这",
- "pinyin": "zhè"
-},
-{"english": "small",
- "chinese": "小",
- "pinyin": "xiǎo"
-},
-{"english": "big",
- "chinese": "大",
- "pinyin": "dà"
+{"english": "where",
+ "chinese": "哪里",
+ "pinyin": "nǎlǐ"
 },
 {"english": "bread",
  "chinese": "面包",
@@ -438,9 +226,74 @@ var terms = Array(
  "chinese": "洋葱",
  "pinyin": "yángcōng"
 },
-{"english": "colour",
- "chinese": "颜色",
- "pinyin": "yánsè"
+{"english": "still (continue to)",
+ "chinese": "还",
+ "pinyin": "hái"
+},
+{"english": "money",
+ "chinese": "钱",
+ "pinyin": "qián"
+},
+{"english": "bean sprouts",
+ "chinese": "豆芽",
+ "pinyin": "dòuyá"
+},
+{"english": "cheese",
+ "chinese": "起司",
+ "pinyin": "qǐ sī"
+},
+{"english": "orange juice",
+ "chinese": "橙汁",
+ "pinyin": "chéngzhī"
+},
+{"english": "vegetable",
+ "chinese": "蔬菜",
+ "pinyin": "shūcài"
+},
+{"english": "garlic",
+ "chinese": "大蒜",
+ "pinyin": "dàsuàn"
+},
+{"english": "mango",
+ "chinese": "芒果",
+ "pinyin": "mángguǒ"
+},
+{"english": "to buy",
+ "chinese": "买",
+ "pinyin": "mǎi"
+},
+{"english": "apple",
+ "chinese": "苹果",
+ "pinyin": "píngguǒ"
+},
+{"english": "half kilo",
+ "chinese": "斤",
+ "pinyin": "jīn"
+},
+{"english": "strawberry",
+ "chinese": "草莓",
+ "pinyin": "cǎoméi"
+},
+{"english": "expensive",
+ "chinese": "贵",
+ "pinyin": "guì"
+},
+{"english": "cheap",
+ "chinese": "便宜",
+ "pinyin": "piányí"
+}
+);
+
+//----------------------------------
+
+var terms['clothes'] = Array(
+{"english": "sock",
+ "chinese": "袜子",
+ "pinyin": "wàzi"
+},
+{"english": "sweater",
+ "chinese": "毛衣",
+ "pinyin": "máoyī"
 },
 {"english": "to wear",
  "chinese": "穿",
@@ -493,10 +346,360 @@ var terms = Array(
 {"english": "tight/slim",
  "chinese": "瘦",
  "pinyin": "shòu"
+}
+);
+
+//----------------------------------
+
+var terms['family'] = Array(
+{"english": "mum",
+ "chinese": "妈妈",
+ "pinyin": "māmā"
 },
-{"english": "still (continue to)",
- "chinese": "还",
- "pinyin": "hái"
+{"english": "dad",
+ "chinese": "爸爸",
+ "pinyin": "bàba"
+},
+{"english": "who",
+ "chinese": "谁",
+ "pinyin": "shéi"
+},
+{"english": "beautiful",
+ "chinese": "漂亮",
+ "pinyin": "piàoliang"
+},
+{"english": "handsome",
+ "chinese": "帅",
+ "pinyin": "shuài"
+},
+{"english": "fat",
+ "chinese": "胖",
+ "pinyin": "pàng"
+},
+{"english": "tall",
+ "chinese": "高",
+ "pinyin": "gāo"
+},
+{"english": "short",
+ "chinese": "矮",
+ "pinyin": "ǎi"
+},
+{"english": "cute",
+ "chinese": "可爱",
+ "pinyin": "kě'ài"
+},
+{"english": "clever",
+ "chinese": "聪明",
+ "pinyin": "cōngmíng"
+},
+{"english": "step-father",
+ "chinese": "继父",
+ "pinyin": "jìfù"
+},
+{"english": "son",
+ "chinese": "儿子",
+ "pinyin": "érzi"
+},
+{"english": "daughter",
+ "chinese": "女儿",
+ "pinyin": "nǚ'ér"
+},
+{"english": "grandpa",
+ "chinese": "爷爷",
+ "pinyin": "yéyé"
+},
+{"english": "grandma",
+ "chinese": "奶奶",
+ "pinyin": "nǎinai"
+},
+{"english": "husband",
+ "chinese": "丈夫",
+ "pinyin": "zhàngfū"
+},
+{"english": "wife",
+ "chinese": "妻子",
+ "pinyin": "qīzi"
+},
+{"english": "friend",
+ "chinese": "朋友",
+ "pinyin": "péngyǒu"
+}
+);
+
+//----------------------------------
+
+var terms['work'] = Array(
+{"english": "office",
+ "chinese": "公司",
+ "pinyin": "gōngsī"
+},
+{"english": "school",
+ "chinese": "学校",
+ "pinyin": "xuéxiào"
+},
+{"english": "to work",
+ "chinese": "工作",
+ "pinyin": "gōngzuò"
+},
+{"english": "to do",
+ "chinese": "做",
+ "pinyin": "zuò"
+},
+{"english": "teacher",
+ "chinese": "老师",
+ "pinyin": "lǎoshī"
+},
+{"english": "doctor",
+ "chinese": "医生",
+ "pinyin": "yīshēng"
+},
+{"english": "nurse",
+ "chinese": "护士",
+ "pinyin": "hùshì"
+},
+{"english": "accountant",
+ "chinese": "会计",
+ "pinyin": "kuàijì"
+},
+{"english": "staff member",
+ "chinese": "职员",
+ "pinyin": "zhíyuán"
+},
+{"english": "driver",
+ "chinese": "司机",
+ "pinyin": "sījī"
+},
+{"english": "secretary",
+ "chinese": "秘书",
+ "pinyin": "mìshū"
+},
+{"english": "chef",
+ "chinese": "厨师",
+ "pinyin": "chúshī"
+},
+{"english": "security guard",
+ "chinese": "保安",
+ "pinyin": "bǎo'ān "
+},
+{"english": "colleague",
+ "chinese": "同事",
+ "pinyin": "tóngshì"
+},
+{"english": "government",
+ "chinese": "政府",
+ "pinyin": "zhèngfǔ"
+},
+{"english": "pounds (£)",
+ "chinese": "英镑",
+ "pinyin": "yīngbàng"
+},
+{"english": "classmates",
+ "chinese": "同学",
+ "pinyin": "tóngxué"
+},
+{"english": "boss",
+ "chinese": "老板",
+ "pinyin": "lǎobǎn"
+},
+{"english": "online",
+ "chinese": "网上",
+ "pinyin": "wǎngshàng"
+},
+{"english": "simple",
+ "chinese": "简单",
+ "pinyin": "jiǎndān"
+}
+);
+
+//----------------------------------
+
+var terms['time'] = Array(
+{"english": "sometimes",
+ "chinese": "有时候",
+ "pinyin": "yǒushíhòu"
+},
+{"english": "when",
+ "chinese": "什么时候",
+ "pinyin": "shénme shíhòu"
+},
+{"english": "often",
+ "chinese": "经常",
+ "pinyin": "jīngcháng"
+},
+{"english": "first time",
+ "chinese": "第一次",
+ "pinyin": "dì yī cì"
+}
+);
+
+//----------------------------------
+
+var terms['active'] = Array(
+{"english": "sports",
+ "chinese": "运动",
+ "pinyin": "yùndòng"
+},
+{"english": "yoga",
+ "chinese": "瑜伽",
+ "pinyin": "yújiā"
+},
+{"english": "martial arts",
+ "chinese": "武术",
+ "pinyin": "wǔshù"
+},
+{"english": "music",
+ "chinese": "音乐",
+ "pinyin": "yīnyuè"
+},
+{"english": "jazz",
+ "chinese": "士乐",
+ "pinyin": "juéshì"
+},
+{"english": "laptop",
+ "chinese": "笔记本电脑",
+ "pinyin": "bǐjìběn diànnǎo"
+},
+{"english": "ipad (tablet)",
+ "chinese": "平板电脑",
+ "pinyin": "píngbǎn diànnǎo"
+},
+{"english": "beach", 
+ "chinese": "沙滩",
+ "pinyin": "shātān"
+},
+{"english": "sofa",
+ "chinese": "沙发",
+ "pinyin": "shāfā"
+},
+{"english": "nervous",
+ "chinese": "紧张",
+ "pinyin": "jǐnzhāng"
+},
+{"english": "trumpet",
+ "chinese": "小号",
+ "pinyin": "xiǎohào"
+},
+{"english": "because",
+ "chinese": "因为",
+ "pinyin": "yīnwèi"
+},
+{"english": "always",
+ "chinese": "总是",
+ "pinyin": "zǒng shì"
+},
+{"english": "sometimes",
+ "chinese": "有时",
+ "pinyin": "yǒushí"
+},
+{"english": "perhaps",
+ "chinese": "可能",
+ "pinyin": "kěnéng"
+},
+{"english": "how many",
+ "chinese": "多少",
+ "pinyin": "duōshǎo"
+},
+{"english": "what",
+ "chinese": "什么",
+ "pinyin": "shénme"
+},
+{"english": "two of",
+ "chinese": "两个",
+ "pinyin": "liǎng gè"
+},
+{"english": "too (too much)",
+ "chinese": "太",
+ "pinyin": "tài  "
+},
+{"english": "a little",
+ "chinese": "一点儿",
+ "pinyin": "yīdiǎnr"
+},
+{"english": "ok",
+ "chinese": "行",
+ "pinyin": "xíng"
+},
+{"english": "to want",
+ "chinese": "要",
+ "pinyin": "yào"
+},
+{"english": "altogether",
+ "chinese": "一共",
+ "pinyin": "yīgòng"
+},
+{"english": "that",
+ "chinese": "那",
+ "pinyin": "nà"
+},
+{"english": "how",
+ "chinese": "怎么",
+ "pinyin": "zěnme"
+},
+{"english": "sell",
+ "chinese": "卖",
+ "pinyin": "mài"
+},
+{"english": "to have",
+ "chinese": "有",
+ "pinyin": "yǒu"
+}
+);
+
+var terms['colours'] = Array(
+{"english": "red",
+ "chinese": "红色",
+ "pinyin": "hóngsè"
+},
+{"english": "green",
+ "chinese": "绿色",
+ "pinyin": "lǜsè"
+},
+{"english": "yellow",
+ "chinese": "黄色",
+ "pinyin": "huángsè"
+},
+{"english": "orange",
+ "chinese": "橙色",
+ "pinyin": "chéngsè"
+},
+{"english": "blue",
+ "chinese": "蓝色",
+ "pinyin": "lánsè"
+},
+{"english": "black",
+ "chinese": "黑色",
+ "pinyin": "hēisè"
+},
+{"english": "white",
+ "chinese": "白色",
+ "pinyin": "báisè"
+},
+{"english": "colour",
+ "chinese": "颜色",
+ "pinyin": "yánsè"
+},
+{"english": "grey",
+ "chinese": "灰色",
+ "pinyin": "huīsè"
+}
+);
+
+var terms['other'] = Array(
+{"english": "to try",
+ "chinese": "试",
+ "pinyin": "shì"
+},
+{"english": "this",
+ "chinese": "这",
+ "pinyin": "zhè"
+},
+{"english": "small",
+ "chinese": "小",
+ "pinyin": "xiǎo"
+},
+{"english": "big",
+ "chinese": "大",
+ "pinyin": "dà"
 },
 {"english": "others (additional)",
  "chinese": "别的",
@@ -566,70 +769,6 @@ var terms = Array(
  "chinese": "慢",
  "pinyin": "màn"
 },
-{"english": "plate",
- "chinese": "盘子",
- "pinyin": "pánzi"
-},
-{"english": "fork",
- "chinese": "叉子",
- "pinyin": "chāzi"
-},
-{"english": "knife",
- "chinese": "刀子",
- "pinyin": "dāozi"
-},
-{"english": "spoon",
- "chinese": "勺子",
- "pinyin": "sháozi"
-},
-{"english": "chopsticks",
- "chinese": "筷子",
- "pinyin": "kuàizi"
-},
-{"english": "pepper",
- "chinese": "辣椒",
- "pinyin": "làjiāo"
-},
-{"english": "ginger",
- "chinese": "姜",
- "pinyin": "jiāng"
-},
-{"english": "corriander",
- "chinese": "香菜",
- "pinyin": "xiāngcài"
-},
-{"english": "dumpling",
- "chinese": "饺子",
- "pinyin": "jiǎozi"
-},
-{"english": "tea",
- "chinese": "茶",
- "pinyin": "chá"
-},
-{"english": "fish",
- "chinese": "鱼",
- "pinyin": "yú"
-},
-{"english": "noodles",
- "chinese": "面条",
- "pinyin": "miàntiáo"
-},
-{"english": "cooked rice",
- "chinese": "米饭",
- "pinyin": "mǐfàn"
-},
-{"english": "school",
- "chinese": "学校",
- "pinyin": "xuéxiào"
-},
-{"english": "to work",
- "chinese": "工作",
- "pinyin": "gōngzuò"
-},
-{"english": "where",
- "chinese": "哪里",
- "pinyin": "nǎlǐ"
-},
 {"english": "to exist (to be at)",
  "chinese": "在",
  "pinyin": "zài"
@@ -637,54 +776,6 @@ var terms = Array(
 {"english": "and",
  "chinese": "和",
  "pinyin": "hé"
-},
-{"english": "mum",
- "chinese": "妈妈",
- "pinyin": "māmā"
-},
-{"english": "dad",
- "chinese": "爸爸",
- "pinyin": "bàba"
-},
-{"english": "to do",
- "chinese": "做",
- "pinyin": "zuò"
-},
-{"english": "teacher",
- "chinese": "老师",
- "pinyin": "lǎoshī"
-},
-{"english": "doctor",
- "chinese": "医生",
- "pinyin": "yīshēng"
-},
-{"english": "nurse",
- "chinese": "护士",
- "pinyin": "hùshì"
-},
-{"english": "accountant",
- "chinese": "会计",
- "pinyin": "kuàijì"
-},
-{"english": "staff member",
- "chinese": "职员",
- "pinyin": "zhíyuán"
-},
-{"english": "driver",
- "chinese": "司机",
- "pinyin": "sījī"
-},
-{"english": "secretary",
- "chinese": "秘书",
- "pinyin": "mìshū"
-},
-{"english": "chef",
- "chinese": "厨师",
- "pinyin": "chúshī"
-},
-{"english": "security guard",
- "chinese": "保安",
- "pinyin": "bǎo'ān "
 },
 {"english": "hotel",
  "chinese": "饭店",
@@ -698,42 +789,6 @@ var terms = Array(
  "chinese": "医院",
  "pinyin": "yīyuàn"
 },
-{"english": "office",
- "chinese": "公司",
- "pinyin": "gōngsī"
-},
-{"english": "who",
- "chinese": "谁",
- "pinyin": "shéi"
-},
-{"english": "beautiful",
- "chinese": "漂亮",
- "pinyin": "piàoliang"
-},
-{"english": "handsome",
- "chinese": "帅",
- "pinyin": "shuài"
-},
-{"english": "fat",
- "chinese": "胖",
- "pinyin": "pàng"
-},
-{"english": "tall",
- "chinese": "高",
- "pinyin": "gāo"
-},
-{"english": "short",
- "chinese": "矮",
- "pinyin": "ǎi"
-},
-{"english": "cute",
- "chinese": "可爱",
- "pinyin": "kě'ài"
-},
-{"english": "clever",
- "chinese": "聪明",
- "pinyin": "cōngmíng"
-},
 {"english": "bank",
  "chinese": "银行",
  "pinyin": "yínháng"
@@ -741,30 +796,6 @@ var terms = Array(
 {"english": "airport",
  "chinese": "飞机场",
  "pinyin": "fēijī chǎng"
-},
-{"english": "son",
- "chinese": "儿子",
- "pinyin": "érzi"
-},
-{"english": "daughter",
- "chinese": "女儿",
- "pinyin": "nǚ'ér"
-},
-{"english": "grandpa",
- "chinese": "爷爷",
- "pinyin": "yéyé"
-},
-{"english": "grandma",
- "chinese": "奶奶",
- "pinyin": "nǎinai"
-},
-{"english": "husband",
- "chinese": "丈夫",
- "pinyin": "zhàngfū"
-},
-{"english": "wife",
- "chinese": "妻子",
- "pinyin": "qīzi"
 },
 {"english": "send a text message",
  "chinese": "发短信",
@@ -794,14 +825,13 @@ var terms = Array(
  "chinese": "商店",
  "pinyin": "shāngdiàn"
 },
-{"english": "friend",
- "chinese": "朋友",
- "pinyin": "péngyǒu"
-},
 {"english": "to send",
  "chinese": "发",
  "pinyin": "fā"
-},
+}
+);
+
+var terms['directions'] = Array(
 {"english": "to know",
  "chinese": "知道",
  "pinyin": "zhīdào"
@@ -845,7 +875,12 @@ var terms = Array(
 {"english": "receipt/invoice",
  "chinese": "发票",
  "pinyin": "fāpiào"
-},
+}
+);
+
+// -------------------------------------
+
+var terms['body'] = Array(
 {"english": "head",
  "chinese": "头",
  "pinyin": "tóu"
@@ -910,10 +945,6 @@ var terms = Array(
  "chinese": "老板",
  "pinyin": "lǎobǎn"
 },
-{"english": "ill/sick",
- "chinese": "病",
- "pinyin": "bìng"
-},
 {"english": "to have to (must)",
  "chinese": "得",
  "pinyin": "děi"
@@ -933,6 +964,10 @@ var terms = Array(
 {"english": "to tell",
  "chinese": "告诉",
  "pinyin": "gàosù"
+},
+{"english": "ill/sick",
+ "chinese": "病",
+ "pinyin": "bìng"
 },
 {"english": "catch a cold",
  "chinese": "感冒",
