@@ -950,3 +950,4 @@ var terms = Array(
  "chinese": "药",
  "pinyin": "yào"
 }
+);
