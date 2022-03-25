@@ -918,7 +918,7 @@ term_list['body'] = Array(
  "chinese": "胳膊",
  "pinyin": "gēbó"
 },
-{"english": "elbo",
+{"english": "elbow",
  "chinese": "手肘",
  "pinyin": "shǒu zhǒu"
 },
@@ -999,8 +999,8 @@ term_list['body'] = Array(
  "pinyin": "yào"
 },
 {"english": "joint",
- "chinese": "耳朵",
- "pinyin": "ěrduǒ"
+ "chinese": "关节",
+ "pinyin": "guānjié"
 }
 );
 
