@@ -1,4 +1,9 @@
 // basic, work, family, active, colours, food, body, weather, clothes, time, directions
+/*
+{"chinese": "",
+ "pinyin": "",
+ "english": ""},
+*/
 var term_list = Array();
 term_list['basic'] = Array(
 {"chinese": "哪儿",
@@ -430,6 +435,10 @@ term_list['family'] = Array(
 //----------------------------------
 
 term_list['work'] = Array(
+{"english": "together",
+ "chinese": "一起"
+ "pinyin": "yīqǐ"
+}
 {"english": "office",
  "chinese": "公司",
  "pinyin": "gōngsī"
@@ -515,6 +524,10 @@ term_list['work'] = Array(
 //----------------------------------
 
 term_list['time'] = Array(
+{"english": "after",
+ "chinese": "以后",
+ "pinyin": "yǐhòu"
+},
 {"english": "sometimes",
  "chinese": "有时候",
  "pinyin": "yǒushíhòu"
@@ -882,6 +895,10 @@ term_list['directions'] = Array(
 // -------------------------------------
 
 term_list['body'] = Array(
+{"english": "hair",
+ "chinese": "头发",
+ "pinyin": "tóufǎ" 
+}
 {"english": "knee",
  "chinese": "膝盖",
  "pinyin": "xīgài"
