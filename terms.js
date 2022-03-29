@@ -438,7 +438,7 @@ term_list['work'] = Array(
 {"english": "together",
  "chinese": "一起",
  "pinyin": "yīqǐ"
-}
+},
 {"english": "office",
  "chinese": "公司",
  "pinyin": "gōngsī"
@@ -898,7 +898,7 @@ term_list['body'] = Array(
 {"english": "hair",
  "chinese": "头发",
  "pinyin": "tóufǎ" 
-}
+},
 {"english": "knee",
  "chinese": "膝盖",
  "pinyin": "xīgài"
