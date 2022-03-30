@@ -797,9 +797,13 @@ term_list['other'] = Array(
  "chinese": "菜单",
  "pinyin": "càidān"
 },
-{"english": "to order (dian)",
+{"english": "to order",
  "chinese": "点",
  "pinyin": "diǎn"
+},
+{"english": "reservation",
+ "chinese": "预订",
+ "pinyin": "yùdìng"
 },
 {"english": "drinks",
  "chinese": "饮料",
