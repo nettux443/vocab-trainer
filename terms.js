@@ -1,4 +1,4 @@
-// basic, work, family, active, colours, food, body, weather, clothes, time, directions
+// basic, places, work, family, active, colours, food, body, weather, clothes, time, directions
 /*
 {"chinese": "",
  "pinyin": "",
@@ -435,6 +435,9 @@ term_list['family'] = Array(
 //----------------------------------
 
 term_list['work'] = Array(
+{"english": "get off work",
+ "chinese": "下班",
+ "pinyin": "xiàbān"
 {"english": "together",
  "chinese": "一起",
  "pinyin": "yīqǐ"
@@ -524,6 +527,21 @@ term_list['work'] = Array(
 //----------------------------------
 
 term_list['time'] = Array(
+{"english": "week",
+ "chinese": "星期",
+ "pinyin": "xīngqí"},
+{"english": "free time",
+ "chinese": "空",
+ "pinyin": "kòng"
+},
+{"english": "weekend",
+ "chinese": "周末",
+ "pinyin": "zhōumò"
+},
+{"english": "before",
+ "chinese": "前",
+ "pinyin": "yǐqián"
+},
 {"english": "after",
  "chinese": "以后",
  "pinyin": "yǐhòu"
@@ -549,6 +567,36 @@ term_list['time'] = Array(
 //----------------------------------
 
 term_list['active'] = Array(
+{"english": "cycling",
+ "chinese": "骑自行车",
+ "pinyin": "qí zìxíngchē"},
+{"english": "bike",
+ "chinese": "自行车",
+ "pinyin": "zìxíngchē"},
+{"english": "to beat/strike/play",
+ "chinese": "打",
+ "pinyin": "dǎ"},
+{"english": "badminton",
+ "chinese": "羽毛球",
+ "pinyin": "yǔmáoqiú"},
+{"english": "tennis",
+ "chinese": "网球",
+ "pinyin": "wǎngqiú"},
+{"chinese": "健身房",
+ "pinyin": "jiànshēnfáng",
+ "english": "gym"},
+{"chinese": "拉",
+ "pinyin": "lā",
+ "english": "pull"},
+{"chinese": "推",
+ "pinyin": "tuī",
+ "english": "push"},
+{"chinese": "开",
+ "pinyin": "kāi",
+ "english": "to open"},
+{"chinese": "关",
+ "pinyin": "guān",
+ "english": "to close"},
 {"english": "sports",
  "chinese": "运动",
  "pinyin": "yùndòng"
@@ -561,6 +609,9 @@ term_list['active'] = Array(
  "chinese": "武术",
  "pinyin": "wǔshù"
 },
+{"chinese": "乐队",
+ "pinyin": "yuèduì",
+ "english": "band"},
 {"english": "music",
  "chinese": "音乐",
  "pinyin": "yīnyuè"
@@ -602,8 +653,8 @@ term_list['active'] = Array(
  "pinyin": "zǒng shì"
 },
 {"english": "sometimes",
- "chinese": "有时",
- "pinyin": "yǒushí"
+ "chinese": "有时后",
+ "pinyin": "yǒushíhòu"
 },
 {"english": "perhaps",
  "chinese": "可能",
@@ -699,6 +750,9 @@ term_list['colours'] = Array(
 );
 
 term_list['other'] = Array(
+{"chinese": "或者",
+ "pinyin": "huòzhě",
+ "english": "or (non-question)"},
 {"english": "to try",
  "chinese": "试",
  "pinyin": "shì"
@@ -791,26 +845,6 @@ term_list['other'] = Array(
  "chinese": "和",
  "pinyin": "hé"
 },
-{"english": "hotel",
- "chinese": "饭店",
- "pinyin": "fàndiàn"
-},
-{"english": "embassy",
- "chinese": "大使馆",
- "pinyin": "dàshǐguǎn"
-},
-{"english": "hospital",
- "chinese": "医院",
- "pinyin": "yīyuàn"
-},
-{"english": "bank",
- "chinese": "银行",
- "pinyin": "yínháng"
-},
-{"english": "airport",
- "chinese": "飞机场",
- "pinyin": "fēijī chǎng"
-},
 {"english": "send a text message",
  "chinese": "发短信",
  "pinyin": "fā duǎnxìn"
@@ -834,10 +868,6 @@ term_list['other'] = Array(
 {"english": "excuse me",
  "chinese": "请问",
  "pinyin": "qǐngwèn"
-},
-{"english": "shop",
- "chinese": "商店",
- "pinyin": "shāngdiàn"
 },
 {"english": "to send",
  "chinese": "发",
@@ -1015,6 +1045,9 @@ term_list['body'] = Array(
  "chinese": "药",
  "pinyin": "yào"
 },
+{"english": "headache",
+ "chinese": "头痛",
+ "pinyin": "tóutòng"},
 {"english": "joint",
  "chinese": "关节",
  "pinyin": "guānjié"
@@ -1070,6 +1103,40 @@ term_list['skills'] = Array(
 {"english": "offline",
  "chinese": "下线",
  "pinyin": "xià xiàn"
+}
+);
+term_list['places'] = Array(
+{"english": "park",
+ "chinese": "公园",
+ "pinyin": "gōngyuán"
+},
+{"english": "hotel",
+ "chinese": "饭店",
+ "pinyin": "fàndiàn"
+},
+{"english": "embassy",
+ "chinese": "大使馆",
+ "pinyin": "dàshǐguǎn"
+},
+{"english": "hospital",
+ "chinese": "医院",
+ "pinyin": "yīyuàn"
+},
+{"english": "bank",
+ "chinese": "银行",
+ "pinyin": "yínháng"
+},
+{"english": "airport",
+ "chinese": "飞机场",
+ "pinyin": "fēijī chǎng"
+},
+{"english": "cinema",
+ "chinese": "电影院",
+ "pinyin": "diànyǐngyuàn"
+}
+{"english": "shop",
+ "chinese": "商店",
+ "pinyin": "shāngdiàn"
 }
 );
 
