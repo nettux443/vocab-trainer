@@ -539,7 +539,7 @@ term_list['time'] = Array(
  "pinyin": "zhōumò"
 },
 {"english": "before",
- "chinese": "前",
+ "chinese": "以前",
  "pinyin": "yǐqián"
 },
 {"english": "after",
