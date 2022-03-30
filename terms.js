@@ -437,7 +437,7 @@ term_list['family'] = Array(
 term_list['work'] = Array(
 {"english": "get off work",
  "chinese": "下班",
- "pinyin": "xiàbān"
+ "pinyin": "xiàbān"},
 {"english": "together",
  "chinese": "一起",
  "pinyin": "yīqǐ"
@@ -1137,7 +1137,7 @@ term_list['places'] = Array(
 {"english": "cinema",
  "chinese": "电影院",
  "pinyin": "diànyǐngyuàn"
-}
+},
 {"english": "shop",
  "chinese": "商店",
  "pinyin": "shāngdiàn"
