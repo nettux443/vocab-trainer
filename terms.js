@@ -1118,6 +1118,10 @@ term_list['places'] = Array(
  "chinese": "大使馆",
  "pinyin": "dàshǐguǎn"
 },
+{"english": "swimming pool",
+ "chinese": "游泳馆",
+ "pinyin": "yóuyǒngguǎn"
+},
 {"english": "hospital",
  "chinese": "医院",
  "pinyin": "yīyuàn"
