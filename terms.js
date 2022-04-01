@@ -200,6 +200,12 @@ term_list['food'] = Array(
  "chinese": "牛奶",
  "pinyin": "niúnǎi"
 },
+{"chinese": "豆浆",
+ "pinyin": "dòujiāng",
+ "english": "soya milk"},
+{"chinese": "稀饭",
+ "pinyin": "xīfàn",
+ "english": "porridge"},
 {"english": "grape",
  "chinese": "葡萄",
  "pinyin": "pútáo"
@@ -293,6 +299,21 @@ term_list['food'] = Array(
 //----------------------------------
 
 term_list['clothes'] = Array(
+{"chinese": "戴",
+ "pinyin": "dài",
+ "english": "to wear (jewellery)"},
+{"chinese": "手表",
+ "pinyin": "shǒubiǎo",
+ "english": "watch"},
+{"chinese": "戒指",
+ "pinyin": "jièzhǐ",
+ "english": "ring"},
+{"chinese": "耳机",
+ "pinyin": "ěrjī",
+ "english": "earphone"},
+{"chinese": "项链",
+ "pinyin": "xiàngliàn",
+ "english": "necklace"},
 {"english": "sock",
  "chinese": "袜子",
  "pinyin": "wàzi"
@@ -527,6 +548,9 @@ term_list['work'] = Array(
 //----------------------------------
 
 term_list['time'] = Array(
+{"chinese": "年轻的时候",
+ "pinyin": "niánqīng de shíhòu",
+ "english": "when I was young"},
 {"english": "week",
  "chinese": "星期",
  "pinyin": "xīngqí"},
@@ -546,6 +570,9 @@ term_list['time'] = Array(
  "chinese": "以后",
  "pinyin": "yǐhòu"
 },
+{"chinese": "一般",
+ "pinyin": "yībān",
+ "english": "usually"},
 {"english": "sometimes",
  "chinese": "有时候",
  "pinyin": "yǒushíhòu"
@@ -567,6 +594,15 @@ term_list['time'] = Array(
 //----------------------------------
 
 term_list['active'] = Array(
+{"chinese": "散步",
+ "pinyin": "sànbù",
+ "english": "to take a walk"},
+{"chinese": "爬山",
+ "pinyin": "páshān",
+ "english": "to climb a mountain"},
+{"chinese": "练习",
+ "pinyin": "liànxí",
+ "english": "practise"},
 {"english": "cycling",
  "chinese": "骑自行车",
  "pinyin": "qí zìxíngchē"},
@@ -652,6 +688,15 @@ term_list['active'] = Array(
  "chinese": "总是",
  "pinyin": "zǒng shì"
 },
+{"chinese": "从",
+ "pinyin": "cóng",
+ "english": "from"},
+{"chinese": "一边",
+ "pinyin": "yībiān",
+ "english": "at once (at the same time)"},
+{"chinese": "从不",
+ "pinyin": "cóngbu",
+ "english": "never"},
 {"english": "sometimes",
  "chinese": "有时后",
  "pinyin": "yǒushíhòu"
@@ -880,6 +925,9 @@ term_list['other'] = Array(
 );
 
 term_list['directions'] = Array(
+{"chinese": "附近",
+ "pinyin": "fùjìn",
+ "english": "vicinity"},
 {"english": "to know",
  "chinese": "知道",
  "pinyin": "zhīdào"
@@ -929,6 +977,9 @@ term_list['directions'] = Array(
 // -------------------------------------
 
 term_list['body'] = Array(
+{"chinese": "皮肤",
+ "pinyin": "pífū",
+ "english": "skin"},
 {"english": "hair",
  "chinese": "头发",
  "pinyin": "tóufǎ" 
@@ -1142,6 +1193,9 @@ term_list['places'] = Array(
  "chinese": "电影院",
  "pinyin": "diànyǐngyuàn"
 },
+{"chinese": "剑桥",
+ "pinyin": "jiànqiáo",
+ "english": "Cambridge"},
 {"english": "shop",
  "chinese": "商店",
  "pinyin": "shāngdiàn"
