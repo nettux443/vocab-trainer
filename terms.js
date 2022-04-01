@@ -866,7 +866,7 @@ term_list['other'] = Array(
  "chinese": "能",
  "pinyin": "néng"
 },
-{"english": "no/not (mei)",
+{"english": "no/not",
  "chinese": "没",
  "pinyin": "méi"
 },
