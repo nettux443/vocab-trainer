@@ -3,6 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <style>
+#hard-ans {
+    text-align: center;
+    clear: left;
+    padding: 5vh;
+    font-size: 3.5vw;
+    width: auto;
+    display: inline-block;
+}
+#hardmode[hardmode=true] {
+    background-color:#9af;
+    color:#fff;
+}
 #top {
     float: left;
     width: 100%;
@@ -24,6 +36,28 @@ body {
     font-size: 3.5vw;
     width: auto;
     display: inline-block;
+}
+#hard {
+    text-align: center;
+}
+#hard-text {
+    margin-top: 4vh;
+    text-align: center;
+    clear: left;
+    padding: 3vh;
+    font-size: 2vw;
+    width: 20vw;
+    display: inline-block;
+    border-radius: 20px;
+}
+#hard-check {
+    text-align: center;
+    clear: left;
+    padding: 3vh;
+    font-size: 2vw;
+    width: auto;
+    display: inline-block;
+    border-radius: 20px;
 }
 .correct {
     background-color: #3f3!important;
@@ -50,6 +84,15 @@ body {
 }
 .ans:hover {
     box-shadow: 0px 0px 5px 5px #9af;
+}
+input[type=button] {
+    margin-left: 1vw;
+    font-size: 1vw;
+    border-radius: 20px;
+    border: 0px;
+    text-align: center;
+    width: 9vw;
+    height: 2vw;
 }
 #toggle-opts {
     float: left;
@@ -97,6 +140,12 @@ function getQuestion() {
 }
 
 function resetQuestion() {
+    var hard_mode = $("#hardmode").attr("hardmode");
+    if (hard_mode === 'true') {
+        hard_mode = true;
+    } else {
+        hard_mode = false;
+    }
     var question = getQuestion();
     $("#q").text(question[0].english);
     $("#q").attr("pinyin", question[0].pinyin);
@@ -104,8 +153,22 @@ function resetQuestion() {
     var answers = shuffle([question[0], question[1], question[2], question[3]]);
     var boxes = ["a0", "a1", "a2", "a3"];
     var i = 0;
+    if (hard_mode) {
+        $("#hard").show();
+    } else {
+        $("#hard").hide();
+    } 
+
+    $("#hard-text").removeClass("correct").removeClass("incorrect");
+    $("#hard-text").val("");
+
     boxes.forEach(function(e) {
         var box = $("#"+e);
+        if (hard_mode) {
+            box.hide()
+        } else {
+            box.show();
+        }
         box.removeClass("correct");
         box.removeClass("incorrect");
         box.html(answers[i].pinyin + "<br/>" + answers[i].chinese);
@@ -113,10 +176,13 @@ function resetQuestion() {
         box.attr("chinese", answers[i].chinese);
         i = i + 1;
     });
+    $("#hard-ans").hide();
+    $("#hard-ans").html("Chinese: " + question[0].chinese + "<br/>Pinyin: " + question[0].pinyin);
 }
 
 $( document ).ready(function() {
-    var options_html = "<ul>";
+    var hard_mode = false;
+    var options_html = "<input id='hardmode' type='button' value='Hard mode' hardmode=false/><ul>";
     const iterator = term_list.keys();
     for (const key of Object.keys(term_list))  {
         options_html = options_html + "<li><input type='checkbox' value='" + key + "' id='opt-"+ key +"' checked/><label for='opt-"+key+"'>" + key + "</label></li>";
@@ -126,6 +192,12 @@ $( document ).ready(function() {
     $("#opts").hide();
 
     resetQuestion();
+
+    $("#hardmode").click(function() {
+        hard_mode = !hard_mode;
+        $(this).attr("hardmode", hard_mode);
+        resetQuestion();
+    });
 
     $(".ans").on('click', function() {
         var correct = $("#q");
@@ -139,6 +211,21 @@ $( document ).ready(function() {
 
     $("#toggle-opts").click(function() {
         $("#opts").toggle();
+    });
+
+    $("#hard-form").submit(function(e) {
+        e.preventDefault();
+        var correct = $("#q");
+        var hard_text = $("#hard-text").val();
+        if (hard_text == correct.attr("chinese")) {
+            $("#hard-text").addClass("correct")
+            setTimeout(resetQuestion, 500);
+        } else {
+            $("#hard-text").addClass("incorrect");
+            $("#hard-ans").show();
+            setTimeout(resetQuestion, 2000);
+        }
+        return false;
     });
 
 });
@@ -157,6 +244,13 @@ $( document ).ready(function() {
 <div class='ans' id='a1'></div>
 <div class='ans' id='a2'></div>
 <div class='ans' id='a3'></div>
+<div id='hard'>
+<form id='hard-form' autocomplete="off">
+<input type='text' id='hard-text'/><br/><br/>
+<div id='hard-ans'></div><br/>
+<input type='submit' id='hard-check' value='Check'/>
+</form>
+</div>
 </body>
 
 </html>

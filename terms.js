@@ -768,7 +768,7 @@ term_list['colours'] = Array(
  "chinese": "黄色",
  "pinyin": "huángsè"
 },
-{"english": "orange",
+{"english": "orange colour",
  "chinese": "橙色",
  "pinyin": "chéngsè"
 },
