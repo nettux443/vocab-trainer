@@ -167,6 +167,21 @@ term_list['weather'] = Array(
 //----------------------------------
 
 term_list['food'] = Array(
+{"chinese": "开水",
+ "pinyin": "kāishuǐ",
+ "english": "boiled water"},
+{"chinese": "热水",
+ "pinyin": "rè shuǐ",
+ "english": "hot water"},
+{"chinese": "温水",
+ "pinyin": "wēnshuǐ",
+ "english": "warm water"},
+{"chinese": "冷水",
+ "pinyin": "lěngshuǐ",
+ "english": "cold water"},
+{"chinese": "冰水",
+ "pinyin": "bīng shuǐ",
+ "english": "ice water"},
 {"english": "plate",
  "chinese": "盘子",
  "pinyin": "pánzi"
