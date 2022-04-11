@@ -1217,7 +1217,7 @@ term_list['skills'] = Array(
  "chinese": "电脑",
  "pinyin": "diànnǎo"
 },
-{"english": "broken",
+{"english": "to turn bad",
  "chinese": "坏",
  "pinyin": "huài"
 },
