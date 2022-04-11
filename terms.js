@@ -635,6 +635,9 @@ term_list['work'] = Array(
 //----------------------------------
 
 term_list['time'] = Array(
+{"chinese": "豁然",
+ "pinyin": "huòrán",
+ "english": "suddenly"},
 {"chinese": "打算",
  "pinyin": "dǎsuàn",
  "english": "to plan"},
@@ -662,7 +665,16 @@ term_list['time'] = Array(
 },
 {"chinese": "一般",
  "pinyin": "yībān",
+ "english": "normally"},
+{"chinese": "tōngcháng",
+ "pinyin": "通常",
  "english": "usually"},
+{"chinese": "一次又一次",
+ "pinyin": "yīcì yòu yīcì",
+ "english": "again and again"},
+{"chinese": "不常",
+ "pinyin": "bù cháng",
+ "english": "infrequently"},
 {"english": "sometimes",
  "chinese": "有时候",
  "pinyin": "yǒushíhòu"
