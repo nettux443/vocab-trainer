@@ -152,6 +152,11 @@ function resetQuestion() {
     }
     
     var pinyin_mode = $("#nopinyinmode").attr("pinyin");
+    if (pinyin_mode === 'true') {
+        pinyin_mode = true;
+    } else {
+        pinyin_mode = false;
+    }
     
     var question = getQuestion();
     $("#q").text(question[0].english);
