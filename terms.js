@@ -611,7 +611,7 @@ term_list['family'] = Array(
 term_list['work'] = Array(
 {"english": "to review",
  "chinese": "复习",
- "pinyin": ""},
+ "pinyin": "fùxí"},
 {"english": "get off work",
  "chinese": "下班",
  "pinyin": "xiàbān"},
