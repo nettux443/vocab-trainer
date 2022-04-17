@@ -170,11 +170,7 @@ function resetQuestion() {
     } else {
         $("#hard").hide();
     } 
-    if (pinyin_mode) {
-        $(".nopinyin").each(function(e) {
-            $(e).hide();
-        });
-    }
+
     $("#hard-text").removeClass("correct").removeClass("incorrect");
     $("#hard-text").val("");
 
@@ -199,12 +195,15 @@ function resetQuestion() {
     $("#hard-ans").hide();
     $("#hard-ans").html("Chinese: " + question[0].chinese + "<br/>Pinyin: " + question[0].pinyin);
 
+    if (!pinyin_mode) {
+        $(".nopinyin").hide()
+    }
 }
 
 $( document ).ready(function() {
     var hard_mode = false;
     var pinyin_mode = true;
-    var options_html = "<input id='hardmode' type='button' value='Hard mode' hardmode=false/><input id='nopinyinmode' type='button' value='Pinyin' pinyin=false/><ul>";
+    var options_html = "<input id='hardmode' type='button' value='Hard mode' hardmode=false/><input id='nopinyinmode' type='button' value='Pinyin' pinyin=\"true\"/><ul>";
     const iterator = term_list.keys();
     for (const key of Object.keys(term_list))  {
         options_html = options_html + "<li><input type='checkbox' value='" + key + "' id='opt-"+ key +"' checked/><label for='opt-"+key+"'>" + key + "</label></li>";
@@ -234,10 +233,7 @@ $( document ).ready(function() {
         } else {
             $(this).addClass("incorrect");
         }
-        $(".nopinyin").each(function(e) {
-            $(e).show();
-        });
-    }
+        $(".nopinyin").show()
         setTimeout(resetQuestion, 500);
     });
 
@@ -255,7 +251,7 @@ $( document ).ready(function() {
         } else {
             $("#hard-text").addClass("incorrect");
             $("#hard-ans").show();
-            setTimeout(resetQuestion, 2000);
+            setTimeout(resetQuestion, 4000);
         }
         return false;
     });
