@@ -15,6 +15,10 @@
     background-color:#9af;
     color:#fff;
 }
+#nopinyinmode[pinyin=true] {
+    background-color:#9af;
+    color:#fff;
+}
 #top {
     float: left;
     width: 100%;
@@ -190,6 +194,7 @@ function resetQuestion() {
 
 $( document ).ready(function() {
     var hard_mode = false;
+    var pinyin = true;
     var options_html = "<input id='hardmode' type='button' value='Hard mode' hardmode=false/><input id='nopinyinmode' type='button' value='Pinyin' pinyin=true/><ul>";
     const iterator = term_list.keys();
     for (const key of Object.keys(term_list))  {
