@@ -15,6 +15,12 @@
     background-color:#9af;
     color:#fff;
 }
+.nopinyin {
+    display: none;   
+}
+.correct.pinyin {
+    display: inline-block;    
+}
 #nopinyinmode[pinyin=true] {
     background-color:#9af;
     color:#fff;
@@ -186,7 +192,7 @@ function resetQuestion() {
         if (pinyin_mode) {
             box.html(answers[i].pinyin + "<br/>" + answers[i].chinese);
         } else {
-            box.html(answers[i].chinese);
+            box.html("<span class='nopinyin'>" + answers[i].pinyin + "<br/></span>" + answers[i].chinese);
         }
         box.attr("english", answers[i].english);
         box.attr("chinese", answers[i].chinese);
