@@ -176,7 +176,7 @@ function resetQuestion() {
         box.removeClass("incorrect");
         if (pinyin_mode) {
             box.html(answers[i].pinyin + "<br/>" + answers[i].chinese);
-        else {
+        } else {
             box.html(answers[i].chinese);
         }
         box.attr("english", answers[i].english);
