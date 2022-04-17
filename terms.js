@@ -701,6 +701,12 @@ term_list['work'] = Array(
 //----------------------------------
 
 term_list['time'] = Array(
+{"chinese": "早就",
+ "pinyin": "zǎo jiù",
+ "english": "earlier"},
+  {"chinese": "已经",
+ "pinyin": "yǐjīng",
+ "english": "already"},
 {"chinese": "豁然",
  "pinyin": "huòrán",
  "english": "suddenly"},
@@ -917,6 +923,18 @@ term_list['active'] = Array(
  "chinese": "卖",
  "pinyin": "mài"
 },
+{"chinese": "一样",
+ "pinyin": "yīyàng",
+ "english": "the same"},
+{"chinese": "拿",
+ "pinyin": "ná",
+ "english": "to take"},
+{"chinese": "让",
+ "pinyin": "ràng",
+ "english": "let"},
+{"chinese": "如果",
+ "pinyin": "rúguǒ",
+ "english": "if"},
 {"english": "to have",
  "chinese": "有",
  "pinyin": "yǒu"
@@ -1370,11 +1388,11 @@ term_list['places'] = Array(
 {"chinese": "剑桥",
  "pinyin": "jiànqiáo",
  "english": "Cambridge"},
+ {"chinese": "教会",
+ "pinyin": "jiàohuì",
+ "english": "church"},
 {"english": "shop",
  "chinese": "商店",
  "pinyin": "shāngdiàn"
 }
 );
-
-
- 
