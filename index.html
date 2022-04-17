@@ -200,7 +200,7 @@ function resetQuestion() {
 $( document ).ready(function() {
     var hard_mode = false;
     var pinyin_mode = true;
-    var options_html = "<input id='hardmode' type='button' value='Hard mode' hardmode=false/><input id='nopinyinmode' type='button' value='Pinyin' pinyin=true/><ul>";
+    var options_html = "<input id='hardmode' type='button' value='Hard mode' hardmode=false/><input id='nopinyinmode' type='button' value='Pinyin' pinyin=false/><ul>";
     const iterator = term_list.keys();
     for (const key of Object.keys(term_list))  {
         options_html = options_html + "<li><input type='checkbox' value='" + key + "' id='opt-"+ key +"' checked/><label for='opt-"+key+"'>" + key + "</label></li>";
