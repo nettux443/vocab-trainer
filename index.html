@@ -15,12 +15,6 @@
     background-color:#9af;
     color:#fff;
 }
-.nopinyin {
-    display: none;   
-}
-.correct.nopinyin, .incorrect.nopinyin {
-    display: inline-block;    
-}
 #nopinyinmode[pinyin=true] {
     background-color:#9af;
     color:#fff;
@@ -176,7 +170,11 @@ function resetQuestion() {
     } else {
         $("#hard").hide();
     } 
-
+    if (pinyin_mode) {
+        $(".nopinyin").each(function(e) {
+            $(e).hide();
+        });
+    }
     $("#hard-text").removeClass("correct").removeClass("incorrect");
     $("#hard-text").val("");
 
@@ -236,6 +234,10 @@ $( document ).ready(function() {
         } else {
             $(this).addClass("incorrect");
         }
+        $(".nopinyin").each(function(e) {
+            $(e).show();
+        });
+    }
         setTimeout(resetQuestion, 500);
     });
 
