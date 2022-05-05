@@ -23,10 +23,7 @@ term_list['basic'] = Array(
  "english": "Goodbye"},
 {"chinese": "的",
  "pinyin": "de",
- "english": "of"},
-{"chinese": "家",
- "pinyin": "jiā",
- "english": "Home"},
+ "english": "modifier particle"},
 {"chinese": "今天",
  "pinyin": "jīntiān",
  "english": "Today"},
@@ -478,6 +475,9 @@ term_list['clothes'] = Array(
 //----------------------------------
 
 term_list['home'] = Array(
+{"chinese": "家",
+ "pinyin": "jiā",
+ "english": "home"},
 {"chinese": "衣柜",
  "pinyin": "yīguì",
  "english": "wardrobe"},
@@ -621,6 +621,9 @@ term_list['family'] = Array(
 //----------------------------------
 
 term_list['work'] = Array(
+{"english": "to review",
+ "chinese": "复习",
+ "pinyin": "fùxí"},
 {"english": "get off work",
  "chinese": "下班",
  "pinyin": "xiàbān"},
@@ -713,6 +716,12 @@ term_list['work'] = Array(
 //----------------------------------
 
 term_list['time'] = Array(
+{"chinese": "早就",
+ "pinyin": "zǎo jiù",
+ "english": "earlier"},
+  {"chinese": "已经",
+ "pinyin": "yǐjīng",
+ "english": "already"},
 {"chinese": "豁然",
  "pinyin": "huòrán",
  "english": "suddenly"},
@@ -774,9 +783,27 @@ term_list['time'] = Array(
 //----------------------------------
 
 term_list['active'] = Array(
+{"chinese": "照片",
+ "pinyin": "zhàopiàn",
+ "english": "photo"},
+{"chinese": "拍照",
+ "pinyin": "pāizhào",
+ "english": "to take photos"},
+{"chinese": "照相机",
+ "pinyin": "zhàoxiàngjī",
+ "english": "camera"},
+{"chinese": "游戏",
+ "pinyin": "yóuxì",
+ "english": "game"},
+{"chinese": "着急",
+ "pinyin": "zhāojí",
+ "english": "anxious"},
 {"chinese": "散步",
  "pinyin": "sànbù",
  "english": "to take a walk"},
+{"chinese": "票",
+ "pinyin": "piào",
+ "english": "ticket"},
 {"chinese": "爬山",
  "pinyin": "páshān",
  "english": "to climb a mountain"},
@@ -929,6 +956,18 @@ term_list['active'] = Array(
  "chinese": "卖",
  "pinyin": "mài"
 },
+{"chinese": "一样",
+ "pinyin": "yīyàng",
+ "english": "the same"},
+{"chinese": "拿",
+ "pinyin": "ná",
+ "english": "to take"},
+{"chinese": "让",
+ "pinyin": "ràng",
+ "english": "let"},
+{"chinese": "如果",
+ "pinyin": "rúguǒ",
+ "english": "if"},
 {"english": "to have",
  "chinese": "有",
  "pinyin": "yǒu"
@@ -1070,6 +1109,10 @@ term_list['other'] = Array(
  "chinese": "在",
  "pinyin": "zài"
 },
+ {"english": "with",
+ "chinese": "跟",
+ "pinyin": "gēn"
+},
 {"english": "and",
  "chinese": "和",
  "pinyin": "hé"
@@ -1120,7 +1163,7 @@ term_list['directions'] = Array(
  "chinese": "到",
  "pinyin": "dào"
 },
-{"english": "straight ahead",
+{"english": "straight ahead/all the time",
  "chinese": "一直",
  "pinyin": "yīzhí"
 },
@@ -1385,6 +1428,9 @@ term_list['places'] = Array(
 {"chinese": "剑桥",
  "pinyin": "jiànqiáo",
  "english": "Cambridge"},
+ {"chinese": "教会",
+ "pinyin": "jiàohuì",
+ "english": "church"},
 {"english": "shop",
  "chinese": "商店",
  "pinyin": "shāngdiàn"
@@ -1491,4 +1537,3 @@ term_list['hsk-3'] = Array(
 
 );
 
- 

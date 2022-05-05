@@ -15,6 +15,10 @@
     background-color:#9af;
     color:#fff;
 }
+#nopinyinmode[pinyin=true] {
+    background-color:#9af;
+    color:#fff;
+}
 #top {
     float: left;
     width: 100%;
@@ -146,6 +150,14 @@ function resetQuestion() {
     } else {
         hard_mode = false;
     }
+    
+    var pinyin_mode = $("#nopinyinmode").attr("pinyin");
+    if (pinyin_mode === 'true') {
+        pinyin_mode = true;
+    } else {
+        pinyin_mode = false;
+    }
+    
     var question = getQuestion();
     $("#q").text(question[0].english);
     $("#q").attr("pinyin", question[0].pinyin);
@@ -171,18 +183,27 @@ function resetQuestion() {
         }
         box.removeClass("correct");
         box.removeClass("incorrect");
-        box.html(answers[i].pinyin + "<br/>" + answers[i].chinese);
+        if (pinyin_mode) {
+            box.html(answers[i].pinyin + "<br/>" + answers[i].chinese);
+        } else {
+            box.html("<span class='nopinyin'>" + answers[i].pinyin + "<br/></span>" + answers[i].chinese);
+        }
         box.attr("english", answers[i].english);
         box.attr("chinese", answers[i].chinese);
         i = i + 1;
     });
     $("#hard-ans").hide();
     $("#hard-ans").html("Chinese: " + question[0].chinese + "<br/>Pinyin: " + question[0].pinyin);
+
+    if (!pinyin_mode) {
+        $(".nopinyin").hide()
+    }
 }
 
 $( document ).ready(function() {
     var hard_mode = false;
-    var options_html = "<input id='hardmode' type='button' value='Hard mode' hardmode=false/><ul>";
+    var pinyin_mode = true;
+    var options_html = "<input id='hardmode' type='button' value='Hard mode' hardmode=false/><input id='nopinyinmode' type='button' value='Pinyin' pinyin=\"true\"/><ul>";
     const iterator = term_list.keys();
     for (const key of Object.keys(term_list))  {
         options_html = options_html + "<li><input type='checkbox' value='" + key + "' id='opt-"+ key +"' checked/><label for='opt-"+key+"'>" + key + "</label></li>";
@@ -198,6 +219,12 @@ $( document ).ready(function() {
         $(this).attr("hardmode", hard_mode);
         resetQuestion();
     });
+    
+    $("#nopinyinmode").click(function() {
+        pinyin_mode = !pinyin_mode;
+        $(this).attr("pinyin", pinyin_mode);
+        resetQuestion();
+    });
 
     $(".ans").on('click', function() {
         var correct = $("#q");
@@ -206,6 +233,7 @@ $( document ).ready(function() {
         } else {
             $(this).addClass("incorrect");
         }
+        $(".nopinyin").show()
         setTimeout(resetQuestion, 500);
     });
 
@@ -223,7 +251,7 @@ $( document ).ready(function() {
         } else {
             $("#hard-text").addClass("incorrect");
             $("#hard-ans").show();
-            setTimeout(resetQuestion, 2000);
+            setTimeout(resetQuestion, 4000);
         }
         return false;
     });
