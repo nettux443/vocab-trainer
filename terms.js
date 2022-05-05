@@ -1445,7 +1445,7 @@ term_list['hsk-3'] = Array(
  "pinyin": "dàsuàn",
  "english": "plan"},
 {"chinese": "跟",
- "pinyin": "yīzhí",
+ "pinyin": "gēn",
  "english": "with"},
 {"chinese": "一直",
  "pinyin": "yīzhí",
